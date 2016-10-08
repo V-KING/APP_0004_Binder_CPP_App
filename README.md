@@ -9,12 +9,12 @@ Test app for Binder, wrote by C++ language.
    - 纯虚函数：
       - sayhello
       - sayhello_to
-2. server端实现BnHelloService:Public BnInterface<IHelloService>
+2. server端实现BnHelloService:Public BnInterface<**IHelloService**>
    - 实现函数：
       - sayhello
       - sayhello_to
       - 接收函数onTransact
-3. client端实现BpHelloService:Public BpInterface<IHelloService>
+3. client端实现BpHelloService:Public BpInterface<**IHelloService**>
    - 实现函数：
       - sayhello
       - sayhello_to
