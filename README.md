@@ -1,7 +1,26 @@
 
 
+
 Test app for Binder, wrote by C++ language.
 =====
+
+# binder C/S编写步骤：
+1. 定义server和client共用的接口IHelloService
+   - 纯虚函数：
+      - sayhello
+      - sayhello_to
+2. server端实现BnHelloService:Public BnInterface<IHelloService>
+   - 实现函数：
+      - sayhello
+      - sayhello_to
+      - 接收函数onTransact
+3. client端实现BpHelloService:Public BpInterface<IHelloService>
+   - 实现函数：
+      - sayhello
+      - sayhello_to
+4. 实现test_server.cpp
+5. 实现test_client.cpp或者test_client.java
+
 
 compile:  
 --
