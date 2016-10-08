@@ -31,10 +31,10 @@ int main(int argc, char **argv)
 	}
 
 	/* getService */
-	/* ´ò¿ªÇı¶¯, mmap */
+	/* æ‰“å¼€é©±åŠ¨, mmap */
 	sp<ProcessState> proc(ProcessState::self());
 
-	/* »ñµÃBpServiceManager */
+	/* è·å¾—BpServiceManager */
 	sp<IServiceManager> sm = defaultServiceManager();
 
 	if (strcmp(argv[1], "hello") == 0)
@@ -49,12 +49,12 @@ int main(int argc, char **argv)
 			return -1;
 		}
 
-		/* service¿Ï¶¨ÊÇBpHelloServieÖ¸Õë */
+		/* serviceè‚¯å®šæ˜¯BpHelloServieæŒ‡é’ˆï¼›çˆ¶ç±»æŒ‡é’ˆå¯ä»¥è°ƒç”¨å­ç±»çš„virtual çš„å‡½æ•° */
 		sp<IHelloService> service =
 		    interface_cast<IHelloService>(binder);
 
 
-		/* µ÷ÓÃServiceµÄº¯Êı */
+		/* è°ƒç”¨Serviceçš„å‡½æ•° */
 		if (argc < 3) {
 			service->sayhello();
 			ALOGI("client call sayhello");
@@ -76,12 +76,12 @@ int main(int argc, char **argv)
 			return -1;
 		}
 
-		/* service¿Ï¶¨ÊÇBpGoodbyeServieÖ¸Õë */
+		/* serviceè‚¯å®šæ˜¯BpGoodbyeServieæŒ‡é’ˆ */
 		sp<IGoodbyeService> service =
 		    interface_cast<IGoodbyeService>(binder);
 
 
-		/* µ÷ÓÃServiceµÄº¯Êı */
+		/* è°ƒç”¨Serviceçš„å‡½æ•° */
 		if (argc < 3) {
 			service->saygoodbye();
 			ALOGI("client call saygoodbye");
